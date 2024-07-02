@@ -3,25 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Centered PDF with White Arrow on Black Background</title>
+    <link rel="icon" type="image/png" href="images/sig.png">
+    <title>VMware</title>
     <style>
         body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
             margin: 0;
+            padding: 0;
             font-family: Arial, sans-serif;
             background-color: black;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
         }
-        .pdf-container {
-            width: 80%;
-            height: 80vh;
+        .header {
+            padding: 20px;
+            z-index: 1000;
         }
         .back-button {
-            position: fixed;
-            top: 20px;
-            left: 20px;
             color: white;
             border: none;
             font-size: 36px;
@@ -32,29 +31,60 @@
         .back-button:hover {
             color: #cccccc;
         }
+        .pdf-container {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 0 20px 20px 20px;
+        }
+        .pdf-viewer {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .fallback-link {
+            display: none;
+            color: white;
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
-    <a href="javascript:void(0);" onclick="goBack()" class="back-button">&#8592;</a>
+    <div class="header">
+        <a href="javascript:void(0);" onclick="goBack()" class="back-button">&#8592;</a>
+    </div>
     
-    <!-- Option 1: Using <embed> tag -->
     <div class="pdf-container">
-        <embed src="assets/data-science-and-the-balanced-team.pdf" type="application/pdf" width="100%" height="100%">
+        <iframe id="pdfViewer" class="pdf-viewer" src="about:blank"></iframe>
+        <a id="fallbackLink" class="fallback-link" href="#" target="_blank">View PDF</a>
     </div>
-
-    <!-- Option 2: Using <iframe> tag (comment out Option 1 if using this) -->
-    <!--
-    <div class="pdf-container">
-        <iframe src="path/to/your/document.pdf" width="100%" height="100%" style="border: none;">
-            This browser does not support PDFs. Please download the PDF to view it: 
-            <a href="path/to/your/document.pdf">Download PDF</a>
-        </iframe>
-    </div>
-    -->
 
     <script>
         function goBack() {
             window.history.back();
+        }
+
+        // Replace this with the actual path to your PDF
+        const pdfUrl = "assets/data-science-and-the-balanced-team.pdf";
+
+        const pdfViewer = document.getElementById('pdfViewer');
+        const fallbackLink = document.getElementById('fallbackLink');
+
+        // Check if the browser can embed PDFs
+        function canEmbedPDF() {
+            return navigator.mimeTypes['application/pdf'] !== undefined || 
+                   (navigator.plugins && navigator.plugins['Chrome PDF Viewer']);
+        }
+
+        if (canEmbedPDF()) {
+            pdfViewer.src = pdfUrl;
+        } else {
+            pdfViewer.style.display = 'none';
+            fallbackLink.style.display = 'block';
+            fallbackLink.href = pdfUrl;
+            fallbackLink.textContent = "Download PDF";
         }
     </script>
 </body>
