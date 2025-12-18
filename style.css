@@ -1,4 +1,4 @@
-/* CSS RESET */
+x/* CSS RESET */
 *,
 *::before,
 *::after{
@@ -133,8 +133,9 @@ main {
 
 /* NAME UNDER IMAGE */
 .sidebar h1 {
-  font-family: 'Lora', serif;
+  font-family: 'Montserrat', serif;
   text-align: left;
+  padding-top: 10px;
   padding-bottom: 20px;
   font-size: 24.5px;
 }
