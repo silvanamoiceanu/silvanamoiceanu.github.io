@@ -11,6 +11,13 @@ ul {
   list-style: none;
 }
 
+.montserrat-<uniquifier> {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
 /*  BODY: ENTIRE PAGE */
 body {
   font-family: 'Poppins', sans-serif;
