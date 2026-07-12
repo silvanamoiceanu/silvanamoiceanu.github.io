@@ -72,6 +72,13 @@ input, select, textarea {
 	appearance: none;
 }
 
+/* Change text color on hover */
+a:hover {
+  color:#0000EE; /* Replace with your desired color code */
+  text-decoration: underline; /* Change or remove this as needed */
+}
+
+
 /* Basic */
 
 	@-ms-viewport {
