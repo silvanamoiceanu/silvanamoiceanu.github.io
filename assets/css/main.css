@@ -71,7 +71,11 @@ input, select, textarea {
 	-ms-appearance: none;
 	appearance: none;
 }
-
+/* 1. Make the link match the surrounding text color by default */
+a {
+  color: inherit; 
+  text-decoration: none; /* Optional: removes the default underline */
+}
 /* Change text color on hover */
 a:hover {
   color:#0000EE; /* Replace with your desired color code */
