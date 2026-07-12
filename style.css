@@ -28,7 +28,7 @@ body {
 /* ALL LINKS ON PAGE */
 a {
   text-decoration: none;
-  color: rgb(98, 148, 239);
+  color: rgb(0, 0, 0);
   transition: all .2s ease-in-out;
 }
 a:hover {
