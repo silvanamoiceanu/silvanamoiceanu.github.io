@@ -139,12 +139,8 @@ main {
   padding-top: 20px;
   padding-bottom: 20px;
   font-size: 24.5px;
-}
-
-h1 {
   display: inline-block;
   border-bottom: 3px solid #ff0000; /* Custom thickness, style, and color */
-  padding-bottom: 5px;             /* Controls spacing between text and line */
 }
 
 /* MOBILE: NAME UNDER IMAGE */
