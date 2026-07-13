@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Silvana - AI & Business Consultant</title>
+<title>Silvana Moiceanu. AI & Business Consultant</title>
 <meta name="description" content="Silvana Moiceanu. AI & Business Consultant, Forward Deployed Engineer, UC Berkeley MIMS.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
   :root{
@@ -57,7 +57,8 @@
 
   .eyebrow{
     display: inline-block;
-    font-family: "IBM Plex Mono", monospace;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
     font-size: 0.72rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
@@ -87,6 +88,18 @@
   }
   .skip-link:focus{ top: 1rem; }
 
+  .sr-only{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
   :focus-visible{
     outline: 2.5px solid var(--focus);
     outline-offset: 3px;
@@ -107,12 +120,14 @@
     border-bottom: 1.5px solid var(--line);
   }
   header.site .wordmark{
-    font-family: "Montserrat", sans-serif;
-    font-weight: 700;
-    font-size: 0.95rem;
-    letter-spacing: 0.02em;
+    display: inline-flex;
+    align-items: center;
     text-decoration: none;
-    color: var(--ink);
+  }
+  header.site .wordmark img{
+    height: 34px;
+    width: auto;
+    display: block;
   }
   header.site nav ul{
     list-style: none;
@@ -122,7 +137,8 @@
     padding: 0;
   }
   header.site nav a{
-    font-family: "IBM Plex Mono", monospace;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
     font-size: 0.8rem;
     text-decoration: none;
     color: var(--ink-soft);
@@ -130,8 +146,7 @@
   }
   header.site nav a:hover{ color: var(--plum); }
   @media (max-width: 660px){
-    header.site nav a{ display: none; }
-    header.site nav a:first-child, header.site nav a:last-child{ display: inline; }
+    header.site{ display: none; }
   }
 
   main{ display:block; }
@@ -264,7 +279,8 @@
   .role-card .org a:hover{ border-color: var(--plum); }
   .role-card .title{
     margin-top: 0.4rem;
-    font-family: "IBM Plex Mono", monospace;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
     font-size: 0.76rem;
     color: var(--plum);
     text-transform: uppercase;
@@ -294,7 +310,8 @@
     border: 1.5px solid var(--line-strong);
   }
   .timeline-item .when{
-    font-family: "IBM Plex Mono", monospace;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
     font-size: 0.74rem;
     color: var(--ink-soft);
     letter-spacing: 0.04em;
@@ -364,7 +381,8 @@
     margin-top: 3rem;
     font-size: 0.8rem;
     color: var(--ink-soft);
-    font-family: "IBM Plex Mono", monospace;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
   }
 
   /* subtle reveal on scroll */
@@ -384,7 +402,9 @@
 <a class="skip-link" href="#main">Skip to content</a>
 
 <header class="site">
-  <a class="wordmark" href="#top">S. MOICEANU</a>
+  <a class="wordmark" href="#top">
+    <img src="signature.png" alt="Silvana Moiceanu signature" width="120" height="120">
+  </a>
   <nav aria-label="Primary">
     <ul>
       <li><a href="#currently">Currently</a></li>
