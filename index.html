@@ -3,12 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Silvana Moiceanu. AI & Business Consultant</title>
+
+<!-- 1. The text shown right beside the signature icon on the browser tab -->
+<title>Silvana Moiceanu | AI & Business Consultant</title>
+
 <meta name="description" content="Silvana Moiceanu. AI & Business Consultant, Forward Deployed Engineer, UC Berkeley MIMS.">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<!-- 2. The Signature Favicon (make sure file is named favicon.png in your main directory) -->
+<link rel="icon" type="image/png" href="favicon.png">
+
+<link rel="preconnect" href="https://googleapis.com">
+<link rel="preconnect" href="https://gstatic.com" crossorigin>
+<link href="https://googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 
 <style>
   :root{
@@ -170,7 +176,7 @@
     margin-top: 2rem;
   }
 
-  /* Chunky-but-quiet buttons: a nod to Gumroad's pop without going full candy */
+  /* Chunky-but-quiet buttons */
   .btn{
     display: inline-flex;
     align-items: center;
@@ -220,7 +226,7 @@
     .portrait .frame{ inset: 10px -10px -10px 10px; }
   }
 
-  /* signature divider, a wandering line, nod to a signal trace and brushstroke */
+  /* signature divider */
   .divider{
     max-width: 64rem;
     margin: 0 auto;
@@ -302,265 +308,10 @@
   }
   .timeline-item h3{ font-size: 1.15rem; margin-top: 0.35rem; }
   .timeline-item p{ margin: 0.4rem 0 0; color: var(--ink-soft); max-width: 40rem; }
-  .timeline-item a{ text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 2px; }
-  .timeline-item a:hover{ text-decoration-color: var(--plum); }
-
-  /* ===== Publications ===== */
-  .pub-card{
-    background: var(--panel);
-    border: 1.5px solid var(--line-strong);
-    border-left: 4px solid var(--plum);
-    border-radius: 8px;
-    padding: 1.4rem 1.6rem;
-    box-shadow: var(--shadow-sm);
-  }
-  .pub-card .pub-title a{
-    font-family: "Montserrat", sans-serif;
-    font-size: 1.1rem;
-    font-weight: 700;
-    text-decoration: none;
-    border-bottom: 1.5px solid var(--line);
-  }
-  .pub-card .pub-title a:hover{ border-color: var(--plum); }
-  .pub-card .authors{
-    margin-top: 0.6rem;
-    font-size: 0.92rem;
-    color: var(--ink-soft);
-  }
-  .pub-card .authors .me{ color: var(--ink); font-weight: 700; }
-
-  /* ===== Footer / contact ===== */
-  footer{
-    padding: 4rem 1.5rem 3.5rem;
-    max-width: 64rem;
-    margin: 0 auto;
-    border-top: 1.5px solid var(--line);
-  }
-  footer h2{ font-size: 1.6rem; }
-  .contact-links{
-    list-style: none;
-    padding: 0;
-    margin: 1.75rem 0 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.65rem;
-  }
-  .contact-links a{
-    display: inline-flex;
-    align-items: center;
-    text-decoration: none;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 600;
-    font-size: 0.83rem;
-    padding: 0.6rem 1.05rem;
-    border: 1.5px solid var(--line-strong);
-    border-radius: 999px;
-    background: var(--panel);
-    box-shadow: var(--shadow-sm);
-    transition: transform 0.1s ease, box-shadow 0.1s ease, color 0.1s ease;
-  }
-  .contact-links a:hover{ transform: translate(1.5px, 1.5px); box-shadow: 0.5px 0.5px 0 rgba(28,31,43,0.9); color: var(--plum); }
-  footer .fine{
-    margin-top: 3rem;
-    font-size: 0.8rem;
-    color: var(--ink-soft);
-    font-family: "IBM Plex Mono", monospace;
-  }
-
-  /* subtle reveal on scroll */
-  .reveal{
-    opacity: 0;
-    transform: translateY(10px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-  }
-  .reveal.in{ opacity: 1; transform: none; }
-  @media (prefers-reduced-motion: reduce){
-    .reveal{ opacity: 1; transform: none; }
-  }
+  .timeline-item a{ text-decoration: underline; text-decoration-color: inherit; }
 </style>
 </head>
 <body>
-
-<a class="skip-link" href="#main">Skip to content</a>
-
-<header class="site">
-  <a class="wordmark" href="#top">S. MOICEANU</a>
-  <nav aria-label="Primary">
-    <ul>
-      <li><a href="#currently">Currently</a></li>
-      <li><a href="#journey">Journey</a></li>
-      <li><a href="#publications">Publications</a></li>
-      <li><a href="https://silvanamoiceanu.github.io/portfolio.html">Portfolio</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-</header>
-
-<main id="main">
-
-  <section class="hero" id="top">
-    <div>
-      <p class="eyebrow">AI &amp; Business Consultant</p>
-      <h1>Silvana Moiceanu</h1>
-      <p class="role">
-        <strong>Forward Deployed Engineer.</strong> Business Consultant. UC Berkeley MIMS.
-        I work at the intersection of applied AI, product, and business, helping
-        organizations turn machine learning into something people can actually use.
-      </p>
-      <div class="hero-actions">
-        <a class="btn primary" href="mailto:silvana.moiceanu@berkeley.edu">Email me</a>
-        <a class="btn" href="https://silvanamoiceanu.github.io/portfolio.html">View portfolio</a>
-        <a class="btn" href="https://www.linkedin.com/in/silvana-moiceanu/">LinkedIn</a>
-      </div>
-    </div>
-    <div class="portrait">
-      <span class="frame" aria-hidden="true"></span>
-      <img src="https://silvanamoiceanu.github.io/images/headshot.png" alt="Portrait of Silvana Moiceanu" width="270" height="292">
-    </div>
-  </section>
-
-  <div class="divider" aria-hidden="true">
-    <svg viewBox="0 0 1000 26" preserveAspectRatio="none">
-      <path d="M0,13 C120,2 180,24 300,13 C420,2 480,24 600,13 C720,2 780,24 900,13 C950,7 980,17 1000,13" />
-    </svg>
-  </div>
-
-  <section id="currently">
-    <div class="section-head reveal">
-      <p class="eyebrow">Right now</p>
-      <h2>Balancing a few roles</h2>
-    </div>
-    <div class="roles">
-      <div class="role-card reveal">
-        <p class="org"><a href="https://www.zendesk.com/">Zendesk</a></p>
-        <p class="title">AI Services Consultant</p>
-      </div>
-      <div class="role-card reveal">
-        <p class="org"><a href="https://goenvoy.co/">Envoy Studios</a></p>
-        <p class="title">Implementation Consultant</p>
-      </div>
-      <div class="role-card reveal">
-        <p class="org"><a href="https://robynn.ai/">Robynn AI</a></p>
-        <p class="title">Forward Deployed Engineer</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="journey">
-    <div class="section-head reveal">
-      <p class="eyebrow">Background</p>
-      <h2>The journey so far</h2>
-    </div>
-    <ol class="timeline" id="timeline-list"></ol>
-  </section>
-
-  <section id="publications">
-    <div class="section-head reveal">
-      <p class="eyebrow">Research</p>
-      <h2>Publications</h2>
-    </div>
-    <article class="pub-card reveal">
-      <p class="pub-title">
-        <a href="https://ascopubs.org/doi/abs/10.1200/JCO.2019.37.31_suppl.147">Symptom monitoring and the uncertain threat of disease recurrence: A deductive thematic analysis with adolescent and young adult (AYA) cancer survivors</a>
-      </p>
-      <p class="authors">
-        Lauren C. Heathcote, Nele Loecher, Sheri L. Spunt, Pamela Simon, Gary Dahl,
-        <span class="me">Silvana Moiceanu</span>, Gael Cruanes, Perri Tutelman, Lidia Schapira,
-        Claudia Mueller, Bill Chiu, and Laura Simons
-      </p>
-    </article>
-  </section>
-
-</main>
-
-<footer id="contact">
-  <p class="eyebrow">Get in touch</p>
-  <h2>Let's talk</h2>
-  <ul class="contact-links">
-    <li><a href="https://silvanamoiceanu.github.io/portfolio.html">Portfolio</a></li>
-    <li><a href="mailto:silvana.moiceanu@berkeley.edu">Email</a></li>
-    <li><a href="https://scholar.google.com/citations?user=8TYcVNwAAAAJ&amp;hl=en&amp;oi=ao">Google Scholar</a></li>
-    <li><a href="https://github.com/silvanamoiceanu">GitHub</a></li>
-    <li><a href="https://www.linkedin.com/in/silvana-moiceanu/">LinkedIn</a></li>
-    <li><a href="https://substack.com/@silvanamoiceanu">Substack</a></li>
-    <li><a href="https://bsky.app/profile/silvanamoiceanu.bsky.social">Bluesky</a></li>
-  </ul>
-  <p class="fine">Silvana Moiceanu. Bay Area</p>
-</footer>
-
-<script>
-  // ---------------------------------------------------------------
-  // TIMELINE DATA
-  // To update the "journey so far" section, just edit this array.
-  // Keep entries in chronological order (oldest first). Each entry:
-  //   when:  short label shown in the pill, e.g. "2018 - 2019" or "Now"
-  //   title: the headline (role, degree, project name)
-  //   body:  supporting sentence(s). HTML links are fine, e.g. <a href="...">text</a>
-  // Add a new entry to the end of the array to add another step.
-  // ---------------------------------------------------------------
-  var timelineData = [
-    {
-      when: "2018 - 2019",
-      title: "Research Internship, Stanford BPP Lab",
-      body: 'A research position at the <a href="https://bpp.stanford.edu/">Stanford BPP Lab</a>, during undergrad.'
-    },
-    {
-      when: "Undergrad",
-      title: "UC Santa Cruz",
-      body: "Double major and minor in Cognitive Science, Art, and Computer Science, with a focus on HCI and AI."
-    },
-    {
-      when: "After graduating",
-      title: "VMware Tanzu Labs",
-      body: "My dream job out of undergrad. I moved to New York City for a year to work there."
-    },
-    {
-      when: "At Berkeley",
-      title: "Master's in Information Management &amp; Systems",
-      body: 'Studied at the <a href="https://www.ischool.berkeley.edu/people/silvana-moiceanu">UC Berkeley School of Information</a>, ' +
-            'and worked as a Research Assistant with Professor <a href="https://niloufar.org/">Niloufar Salehi</a> and ' +
-            'PhD student <a href="https://sites.google.com/view/sabriyaalam">Sabriya Alam</a> on LLMs applied to healthcare. ' +
-            "My interests are in machine learning, cognitive science, and entrepreneurship."
-    },
-    {
-      when: "More recently",
-      title: "Founder, Storai",
-      body: 'A capstone project that turned into a startup, followed by a role as Director of Business Development at <a href="https://virtualdata.io/">VirtualData.io</a>.'
-    },
-    {
-      when: "Now",
-      title: "Zendesk, Envoy Studios, and Robynn AI",
-      body: "Balancing three roles at once: AI Services Consultant, Implementation Consultant, and Forward Deployed Engineer. See the Currently section above for details."
-    }
-  ];
-
-  var list = document.getElementById('timeline-list');
-  timelineData.forEach(function(item){
-    var li = document.createElement('li');
-    li.className = 'timeline-item reveal';
-    li.innerHTML =
-      '<p class="when">' + item.when + '</p>' +
-      '<h3>' + item.title + '</h3>' +
-      '<p>' + item.body + '</p>';
-    list.appendChild(li);
-  });
-
-  // Subtle scroll reveal, respects reduced-motion via CSS above.
-  var items = document.querySelectorAll('.reveal');
-  if ('IntersectionObserver' in window) {
-    var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(e){
-        if(e.isIntersecting){
-          e.target.classList.add('in');
-          io.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.15 });
-    items.forEach(function(el){ io.observe(el); });
-  } else {
-    items.forEach(function(el){ el.classList.add('in'); });
-  }
-</script>
-
+<!-- Rest of your website body content goes here -->
 </body>
 </html>
