@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Silvana Moiceanu. AI & Business Consultant</title>
 <link rel="icon" type="image/png" href="favicon.png">
+<link rel="shortcut icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
 <meta name="description" content="Silvana Moiceanu. AI & Business Consultant, Forward Deployed Engineer, UC Berkeley MIMS.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -288,15 +290,29 @@
     letter-spacing: 0.05em;
   }
 
-  /* ===== Timeline ===== */
+  /* ===== Timeline =====
+     The vertical line and the dots are both positioned from the SAME
+     variables below, so they always land in the same spot no matter
+     how the page is resized. To adjust spacing, only change these: */
   .timeline{
-    --tl-gap: 1.9rem;   /* distance between the vertical line and the text */
+    --tl-col: 0.95rem;  /* distance from the list's left edge to the center of the line/dots */
+    --tl-gap: 1.9rem;   /* distance from the list's left edge to the text content */
     --tl-dot: 11px;     /* dot diameter */
+    --tl-line: 1.5px;   /* line thickness */
     position: relative;
     list-style: none;
     margin: 0;
     padding-left: var(--tl-gap);
-    border-left: 1.5px solid var(--line);
+  }
+  .timeline::before{
+    /* the vertical line, starts exactly at the center of the first dot */
+    content: "";
+    position: absolute;
+    left: calc(var(--tl-col) - (var(--tl-line) / 2));
+    top: calc(0.3em + (var(--tl-dot) / 2));
+    bottom: 0;
+    width: var(--tl-line);
+    background: var(--line);
   }
   .timeline-item{
     position: relative;
@@ -307,8 +323,8 @@
   .timeline-item::before{
     content: "";
     position: absolute;
-    /* centers the dot on the line above, no matter what --tl-gap or --tl-dot are set to */
-    left: calc(-1 * var(--tl-gap) - (var(--tl-dot) / 2));
+    /* centered on the line: same --tl-col reference as .timeline::before above */
+    left: calc(var(--tl-col) - var(--tl-gap) - (var(--tl-dot) / 2));
     top: 0.3em;
     width: var(--tl-dot);
     height: var(--tl-dot);
