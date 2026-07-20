@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Silvana Moiceanu. AI & Business Consultant</title>
+<link rel="icon" type="image/png" href="favicon.png">
 <meta name="description" content="Silvana Moiceanu. AI & Business Consultant, Forward Deployed Engineer, UC Berkeley MIMS.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -289,22 +290,29 @@
 
   /* ===== Timeline ===== */
   .timeline{
+    --tl-gap: 1.9rem;   /* distance between the vertical line and the text */
+    --tl-dot: 11px;     /* dot diameter */
     position: relative;
-    padding-left: 1.9rem;
+    list-style: none;
+    margin: 0;
+    padding-left: var(--tl-gap);
     border-left: 1.5px solid var(--line);
   }
   .timeline-item{
     position: relative;
+    margin: 0;
     padding-bottom: 2.1rem;
   }
   .timeline-item:last-child{ padding-bottom: 0; }
   .timeline-item::before{
     content: "";
     position: absolute;
-    left: -2.14rem;
-    top: 0.28rem;
-    width: 11px;
-    height: 11px;
+    /* centers the dot on the line above, no matter what --tl-gap or --tl-dot are set to */
+    left: calc(-1 * var(--tl-gap) - (var(--tl-dot) / 2));
+    top: 0.3em;
+    width: var(--tl-dot);
+    height: var(--tl-dot);
+    box-sizing: border-box;
     border-radius: 50%;
     background: var(--gold);
     border: 1.5px solid var(--line-strong);
